@@ -54,6 +54,20 @@ The following key mappings will be also available unless
 
 
 ==============================================================================
+EXAMPLES					*visualstar-examples*
+
+Search the text, but cursor don't move to next match. >
+	map * <Plug>(visualstar)N
+	map # <Plug>(visualstar-#)N
+
+If you map N to something, you must create and use a secondary key mapping. >
+	noremap <Plug>N N
+	map * <Plug>(visualstar)<Plug>N
+	map # <Plug>(visualstar-#)<Plug>N
+
+
+
+==============================================================================
 CHANGELOG					*visualstar-changelog*
 
 0.1.0	xxxx.xx.xx
