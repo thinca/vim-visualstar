@@ -34,6 +34,14 @@ KEY MAPPINGS					*visualstar-key-mappings*
 <Plug>(visualstar-#)				*<Plug>(visualstar-#)* *v_#*
 			Same as |<Plug>(visualstar)|, but search backward.
 
+In |Normal-mode| and |Operator-pending-mode|, the following key mappings will
+be also defined for convenience.
+
+{lhs}				{rhs}
+------------------------	------
+<Plug>(visualstar)		*
+<Plug>(visualstar-#)		#
+
 
 					*g:visualstar_no_default_key_mappings*
 The following key mappings will be also available unless

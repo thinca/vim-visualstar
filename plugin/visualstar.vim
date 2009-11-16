@@ -26,6 +26,9 @@ endfunction
 
 
 
+noremap <silent> <Plug>(visualstar)   *
+noremap <silent> <Plug>(visualstar-#) #
+
 vnoremap <silent> <Plug>(visualstar)   :<C-u>call <SID>search('/')<CR>/<CR>
 vnoremap <silent> <Plug>(visualstar-#) :<C-u>call <SID>search('?')<CR>?<CR>
 
