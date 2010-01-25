@@ -30,10 +30,23 @@ KEY MAPPINGS					*visualstar-key-mappings*
 
 <Plug>(visualstar-*)			*<Plug>(visualstar-star)* *v_star*
 			Search forward for selection text in |Visual-mode|.
+			If the character of head of selection text is
+			'iskeyword' character, and outside of selection area
+			is not 'iskeyword' character, "\<" is appended to the
+			head of search word like same as |star|.
+			The tail is also similar.
 
 <Plug>(visualstar-#)			*<Plug>(visualstar-#)* *v_#*
 			Same as |<Plug>(visualstar-star)|, but search
 			backward.
+
+<Plug>(visualstar-g*)			*<Plug>(visualstar-gstar)* *v_gstar*
+			Like |<Plug>(visualstar-star)|, but don't put "\<" and
+			"\>" around the word.
+
+<Plug>(visualstar-g#)			*<Plug>(visualstar-g#)* *v_g#*
+			Like |<Plug>(visualstar-#)|, but don't put "\<" and
+			"\>" around the word.
 
 In |Normal-mode| and |Operator-pending-mode|, the following key mappings will
 be also defined for convenience.
@@ -42,16 +55,20 @@ be also defined for convenience.
 ------------------------	------
 <Plug>(visualstar-*)		*
 <Plug>(visualstar-#)		#
+<Plug>(visualstar-g*)		g*
+<Plug>(visualstar-g#)		g#
 
 
 					*g:visualstar_no_default_key_mappings*
-The following key mappings will be also available unless
+The following key mappings will be also available in |Visual-mode| unless
 |g:visualstar_no_default_key_mappings| is defined:
 
 {lhs}		{rhs}
 --------	---------------------
 *		<Plug>(visualstar-*)
 #		<Plug>(visualstar-#)
+g*		<Plug>(visualstar-g*)
+g#		<Plug>(visualstar-g#)
 
 
 ==============================================================================
@@ -74,6 +91,11 @@ CHANGELOG					*visualstar-changelog*
 x.x.x	xxxx-xx-xx
 	- Changed the key mapping name.
 	  - <Plug>(visualstar) -> <Plug>(visualstar-*)
+	- Added |<Plug>(visualstar-gstar)| and |<Plug>(visualstar-g#)|.
+	  - These are same as <Plug>(visualstar) and <Plug>(visualstar-#) of
+	    version before.
+	  - Changed the behavior of <Plug>(visualstar-*) and
+	    <Plug>(visualstar-#).
 
 0.1.0	2009-11-16
 	- Initial version.
