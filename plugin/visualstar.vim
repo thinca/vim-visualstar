@@ -37,6 +37,12 @@ function! s:search(type, g)
 
   let @/ = '\V' . pre . text . post
   call histadd('/', @/)
+
+  let s:count = v:count1 . a:type
+endfunction
+
+function! s:count()
+  return s:count . "\<CR>"
 endfunction
 
 
@@ -46,11 +52,16 @@ noremap <silent> <Plug>(visualstar-#) #
 noremap <silent> <Plug>(visualstar-g*) g*
 noremap <silent> <Plug>(visualstar-g#) g#
 
-vnoremap <silent> <Plug>(visualstar-*)  :<C-u>call <SID>search('/',0)<CR>/<CR>
-vnoremap <silent> <Plug>(visualstar-#)  :<C-u>call <SID>search('?',0)<CR>?<CR>
-vnoremap <silent> <Plug>(visualstar-g*) :<C-u>call <SID>search('/',1)<CR>/<CR>
-vnoremap <silent> <Plug>(visualstar-g#) :<C-u>call <SID>search('?',1)<CR>?<CR>
+vnoremap <silent> <script> <Plug>(visualstar-*)
+\        :<C-u>call <SID>search('/', 0)<CR><SID>(count)
+vnoremap <silent> <script> <Plug>(visualstar-#)
+\        :<C-u>call <SID>search('?', 0)<CR><SID>(count)
+vnoremap <silent> <script> <Plug>(visualstar-g*)
+\        :<C-u>call <SID>search('/', 1)<CR><SID>(count)
+vnoremap <silent> <script> <Plug>(visualstar-g#)
+\        :<C-u>call <SID>search('?', 1)<CR><SID>(count)
 
+nnoremap <expr> <SID>(count) <SID>count()
 
 
 if !exists('g:visualstar_no_default_key_mappings') ||

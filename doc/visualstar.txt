@@ -29,7 +29,8 @@ INTERFACE					*visualstar-interface*
 KEY MAPPINGS					*visualstar-key-mappings*
 
 <Plug>(visualstar-*)			*<Plug>(visualstar-star)* *v_star*
-			Search forward for selection text in |Visual-mode|.
+			Search forward for the [count]'th occurrence of
+			selection text in |Visual-mode| nearest to the cursor.
 			If the character of head of selection text is
 			'iskeyword' character, and outside of selection area
 			is not 'iskeyword' character, "\<" is appended to the
@@ -96,6 +97,7 @@ x.x.x	xxxx-xx-xx
 	    version before.
 	  - Changed the behavior of <Plug>(visualstar-*) and
 	    <Plug>(visualstar-#).
+	- [count] is now available.
 
 0.1.0	2009-11-16
 	- Initial version.
