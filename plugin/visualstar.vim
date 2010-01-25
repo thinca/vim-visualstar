@@ -26,17 +26,17 @@ endfunction
 
 
 
-noremap <silent> <Plug>(visualstar)   *
+noremap <silent> <Plug>(visualstar-*) *
 noremap <silent> <Plug>(visualstar-#) #
 
-vnoremap <silent> <Plug>(visualstar)   :<C-u>call <SID>search('/')<CR>/<CR>
+vnoremap <silent> <Plug>(visualstar-*) :<C-u>call <SID>search('/')<CR>/<CR>
 vnoremap <silent> <Plug>(visualstar-#) :<C-u>call <SID>search('?')<CR>?<CR>
 
 
 
 if !exists('g:visualstar_no_default_key_mappings') ||
 \   !g:visualstar_no_default_key_mappings
-  silent! vmap <unique> * <Plug>(visualstar)
+  silent! vmap <unique> * <Plug>(visualstar-*)
   silent! vmap <unique> # <Plug>(visualstar-#)
 endif
 

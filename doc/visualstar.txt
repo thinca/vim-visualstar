@@ -28,18 +28,19 @@ INTERFACE					*visualstar-interface*
 ------------------------------------------------------------------------------
 KEY MAPPINGS					*visualstar-key-mappings*
 
-<Plug>(visualstar)				*<Plug>(visualstar)* *v_star*
+<Plug>(visualstar-*)			*<Plug>(visualstar-star)* *v_star*
 			Search forward for selection text in |Visual-mode|.
 
-<Plug>(visualstar-#)				*<Plug>(visualstar-#)* *v_#*
-			Same as |<Plug>(visualstar)|, but search backward.
+<Plug>(visualstar-#)			*<Plug>(visualstar-#)* *v_#*
+			Same as |<Plug>(visualstar-star)|, but search
+			backward.
 
 In |Normal-mode| and |Operator-pending-mode|, the following key mappings will
 be also defined for convenience.
 
 {lhs}				{rhs}
 ------------------------	------
-<Plug>(visualstar)		*
+<Plug>(visualstar-*)		*
 <Plug>(visualstar-#)		#
 
 
@@ -49,7 +50,7 @@ The following key mappings will be also available unless
 
 {lhs}		{rhs}
 --------	---------------------
-*		<Plug>(visualstar)
+*		<Plug>(visualstar-*)
 #		<Plug>(visualstar-#)
 
 
@@ -57,18 +58,22 @@ The following key mappings will be also available unless
 EXAMPLES					*visualstar-examples*
 
 Search the text, but cursor don't move to next match. >
-	map * <Plug>(visualstar)N
+	map * <Plug>(visualstar-*)N
 	map # <Plug>(visualstar-#)N
 
 If you map N to something, you must create and use a secondary key mapping. >
 	noremap <Plug>N N
-	map * <Plug>(visualstar)<Plug>N
+	map * <Plug>(visualstar-*)<Plug>N
 	map # <Plug>(visualstar-#)<Plug>N
 
 
 
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
+
+x.x.x	xxxx-xx-xx
+	- Changed the key mapping name.
+	  - <Plug>(visualstar) -> <Plug>(visualstar-*)
 
 0.1.0	2009-11-16
 	- Initial version.
