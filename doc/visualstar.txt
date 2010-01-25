@@ -1,6 +1,6 @@
 *visualstar.txt*	|star| for |Visual-mode|.
 
-Version: 0.1.0
+Version: 0.2.0
 Author : thinca <thinca+vim@gmail.com>
 License: Creative Commons Attribution 2.1 Japan License
          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
@@ -72,6 +72,7 @@ g*		<Plug>(visualstar-g*)
 g#		<Plug>(visualstar-g#)
 
 
+
 ==============================================================================
 EXAMPLES					*visualstar-examples*
 
@@ -89,7 +90,7 @@ If you map N to something, you must create and use a secondary key mapping. >
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
 
-x.x.x	xxxx-xx-xx
+0.2.0	2010-01-25
 	- Changed the key mapping name.
 	  - <Plug>(visualstar) -> <Plug>(visualstar-*)
 	- Added |<Plug>(visualstar-gstar)| and |<Plug>(visualstar-g#)|.
