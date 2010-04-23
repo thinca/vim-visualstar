@@ -26,7 +26,7 @@ function! s:search(type, g)
     let is_head_multibyte = 1 < len(head)
     let [l, col] = getpos("'<")[1 : 2]
     if !is_head_multibyte && text =~# '^\k'
-    \   && (col == 1 || getline(l)[col - 2] !~# '\k')
+    \   && (col == 1 || getline(l)[: col - 2] !~# '\k$')
       let pre = '\<'
     endif
 
@@ -35,7 +35,7 @@ function! s:search(type, g)
     let [l, col] = getpos("'>")[1 : 2]
     let line = getline(l)
     if !is_tail_multibyte && text =~# '\k$'
-    \   && (col == len(line) || line[col] !~# '\k')
+    \   && (col == len(line) || line[col :] !~# '^\k')
       let post = '\>'
     endif
   endif
