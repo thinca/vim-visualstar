@@ -91,6 +91,9 @@ If you map N to something, you must create and use a secondary key mapping. >
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
 
+x.x.x	xxxx-xx-xx
+	- Don't append \< and \> if the edge of string is multibyte character.
+
 0.2.0	2010-01-25
 	- Changed the key mapping name.
 	  - <Plug>(visualstar) -> <Plug>(visualstar-*)

@@ -22,13 +22,20 @@ function! s:search(type, g)
 
   let [pre, post] = ['', '']
   if !a:g
+    let head = matchstr(text, '^.')
+    let is_head_multibyte = 1 < len(head)
     let [l, col] = getpos("'<")[1 : 2]
-    if text =~# '^\k' && (col == 1 || getline(l)[col - 2] !~# '\k')
+    if !is_head_multibyte && text =~# '^\k'
+    \   && (col == 1 || getline(l)[col - 2] !~# '\k')
       let pre = '\<'
     endif
+
+    let tail = matchstr(text, '.$')
+    let is_tail_multibyte = 1 < len(tail)
     let [l, col] = getpos("'>")[1 : 2]
     let line = getline(l)
-    if text =~# '\k$' && (col == len(line) || line[col] !~# '\k')
+    if !is_tail_multibyte && text =~# '\k$'
+    \   && (col == len(line) || line[col] !~# '\k')
       let post = '\>'
     endif
   endif
