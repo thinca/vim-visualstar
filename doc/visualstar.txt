@@ -11,6 +11,7 @@ CONTENTS					*visualstar-contents*
 INTRODUCTION			|visualstar-introduction|
 INTERFACE			|visualstar-interface|
   KEY MAPPINGS			  |visualstar-key-mappings|
+EXAMPLES			|visualstar-examples|
 CHANGELOG			|visualstar-changelog|
 
 
