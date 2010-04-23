@@ -25,17 +25,23 @@ function! s:search(type, g)
     let head = matchstr(text, '^.')
     let is_head_multibyte = 1 < len(head)
     let [l, col] = getpos("'<")[1 : 2]
-    if !is_head_multibyte && text =~# '^\k'
-    \   && (col == 1 || getline(l)[: col - 2] !~# '\k$')
+    let line = getline(l)
+    let before = line[: col - 2]
+    let outer = matchstr(before, '.$')
+    if text =~# '^\k' && ((!empty(outer) && len(outer) != len(head)) ||
+    \   (!is_head_multibyte && (col == 1 || before !~# '\k$')))
       let pre = '\<'
     endif
 
     let tail = matchstr(text, '.$')
     let is_tail_multibyte = 1 < len(tail)
     let [l, col] = getpos("'>")[1 : 2]
+    let col += len(tail) - 1
     let line = getline(l)
-    if !is_tail_multibyte && text =~# '\k$'
-    \   && (col == len(line) || line[col :] !~# '^\k')
+    let after = line[col :]
+    let outer = matchstr(after, '^.')
+    if text =~# '\k$' && ((!empty(outer) && len(outer) != len(tail)) ||
+    \   (!is_tail_multibyte && (col == len(line) || after !~# '^\k')))
       let post = '\>'
     endif
   endif

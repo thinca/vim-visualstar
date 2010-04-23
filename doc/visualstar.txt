@@ -93,6 +93,8 @@ CHANGELOG					*visualstar-changelog*
 
 x.x.x	xxxx-xx-xx
 	- Don't append \< and \> if the edge of string is multibyte character.
+	- Append \< and \> if it is differed inside or outside of the boundary
+	  that is multibyte character or not.
 
 0.2.0	2010-01-25
 	- Changed the key mapping name.
