@@ -68,8 +68,10 @@ The following key mappings will be also available in |Visual-mode| unless
 {lhs}		{rhs}
 --------	---------------------
 *		<Plug>(visualstar-*)
+<kMultiply>	<Plug>(visualstar-*)
 #		<Plug>(visualstar-#)
 g*		<Plug>(visualstar-g*)
+g<kMultiply>	<Plug>(visualstar-g*)
 g#		<Plug>(visualstar-g#)
 
 
@@ -90,6 +92,9 @@ If you map N to something, you must create and use a secondary key mapping. >
 
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
+
+x.x	xxxx-xx-xx
+	- Added key mappings from <kMultiply>.
 
 0.2.1	2010-04-23
 	- Don't append \< and \> if the edge of string is multibyte character.
