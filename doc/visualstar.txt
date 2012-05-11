@@ -1,6 +1,6 @@
 *visualstar.txt*	|star| for |Visual-mode|.
 
-Version: 0.2.1
+Version: 0.3.0
 Author : thinca <thinca+vim@gmail.com>
 License: zlib License
 
@@ -12,6 +12,7 @@ INTERFACE			|visualstar-interface|
   KEY MAPPINGS			  |visualstar-key-mappings|
 EXAMPLES			|visualstar-examples|
 CHANGELOG			|visualstar-changelog|
+
 
 
 ==============================================================================
@@ -98,7 +99,7 @@ If you map N to something, you must create and use a secondary key mapping. >
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
 
-x.x	xxxx-xx-xx
+0.3.0	2012-05-12
 	- Added key mappings from <kMultiply>.
 
 0.2.1	2010-04-23
