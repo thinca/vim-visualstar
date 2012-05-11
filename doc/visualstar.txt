@@ -20,6 +20,12 @@ INTRODUCTION					*visualstar-introduction*
 *visualstar* is a Vim plugin to provide a |star| feature for |Visual-mode|.
 In other words, you can search your selection text in |Visual-mode|.
 
+Requirements:
+- Vim 7.2 or later
+
+Latest version:
+https://github.com/thinca/vim-visualstar
+
 
 
 ==============================================================================
