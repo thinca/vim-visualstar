@@ -78,12 +78,12 @@ nnoremap <expr> <SID>(count) <SID>count()
 
 if !exists('g:visualstar_no_default_key_mappings') ||
 \   !g:visualstar_no_default_key_mappings
-  silent! vmap <unique> * <Plug>(visualstar-*)
-  silent! vmap <unique> <kMultiply> <Plug>(visualstar-*)
-  silent! vmap <unique> # <Plug>(visualstar-#)
-  silent! vmap <unique> g* <Plug>(visualstar-g*)
-  silent! vmap <unique> g<kMultiply> <Plug>(visualstar-g*)
-  silent! vmap <unique> g# <Plug>(visualstar-g#)
+  silent! xmap <unique> * <Plug>(visualstar-*)
+  silent! xmap <unique> <kMultiply> <Plug>(visualstar-*)
+  silent! xmap <unique> # <Plug>(visualstar-#)
+  silent! xmap <unique> g* <Plug>(visualstar-g*)
+  silent! xmap <unique> g<kMultiply> <Plug>(visualstar-g*)
+  silent! xmap <unique> g# <Plug>(visualstar-g#)
 endif
 
 
