@@ -1,6 +1,6 @@
 *visualstar.txt*	|star| for |Visual-mode|.
 
-Version: 0.3.0
+Version: 0.4.0
 Author : thinca <thinca+vim@gmail.com>
 License: zlib License
 
@@ -98,6 +98,10 @@ If you map N to something, you must create and use a secondary key mapping. >
 
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
+
+0.4.0	2012-06-28
+	- Removed default key mappings from |Select-mode|.
+	- Added key mappings from <S-LeftMouse>.
 
 0.3.0	2012-05-12
 	- Added key mappings from <kMultiply>.
