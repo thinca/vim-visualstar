@@ -13,6 +13,7 @@ set cpo&vim
 
 
 function! s:search(type, g)
+  let s:count = v:count1 . a:type
   let reg = '"'
   let [save_reg, save_type] = [getreg(reg), getregtype(reg)]
   normal! gvy
@@ -49,8 +50,6 @@ function! s:search(type, g)
 
   let @/ = '\V' . pre . text . post
   call histadd('/', @/)
-
-  let s:count = v:count1 . a:type
 endfunction
 
 function! s:count()
