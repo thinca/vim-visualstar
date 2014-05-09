@@ -79,11 +79,11 @@ if !exists('g:visualstar_no_default_key_mappings') ||
 \   !g:visualstar_no_default_key_mappings
   silent! xmap <unique> * <Plug>(visualstar-*)
   silent! xmap <unique> <kMultiply> <Plug>(visualstar-*)
-  silent! vmap <unique> <S-LeftMouse> <Plug>(visualstar-*)
+  silent! xmap <unique> <S-LeftMouse> <Plug>(visualstar-*)
   silent! xmap <unique> # <Plug>(visualstar-#)
   silent! xmap <unique> g* <Plug>(visualstar-g*)
   silent! xmap <unique> g<kMultiply> <Plug>(visualstar-g*)
-  silent! vmap <unique> g<S-LeftMouse> <Plug>(visualstar-g*)
+  silent! xmap <unique> g<S-LeftMouse> <Plug>(visualstar-g*)
   silent! xmap <unique> g# <Plug>(visualstar-g#)
 endif
 
