@@ -75,9 +75,11 @@ The following key mappings will be also available in |Visual-mode| unless
 --------	---------------------
 *		<Plug>(visualstar-*)
 <kMultiply>	<Plug>(visualstar-*)
+<S-LeftMouse>	<Plug>(visualstar-*)
 #		<Plug>(visualstar-#)
 g*		<Plug>(visualstar-g*)
 g<kMultiply>	<Plug>(visualstar-g*)
+g<S-LeftMouse>	<Plug>(visualstar-g*)
 g#		<Plug>(visualstar-g#)
 
 
