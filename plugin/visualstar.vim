@@ -56,6 +56,13 @@ function! s:count()
   return s:count . "\<CR>"
 endfunction
 
+function! s:extra_commands()
+  if exists('g:visualstar_extra_commands')
+    return g:visualstar_extra_commands
+  else
+    return ''
+  endif
+endfunction
 
 
 noremap <silent> <Plug>(visualstar-*) *
@@ -64,15 +71,16 @@ noremap <silent> <Plug>(visualstar-g*) g*
 noremap <silent> <Plug>(visualstar-g#) g#
 
 vnoremap <silent> <script> <Plug>(visualstar-*)
-\        :<C-u>call <SID>search('/', 0)<CR><SID>(count)
+\        :<C-u>call <SID>search('/', 0)<CR><SID>(count)<SID>(extra_commands)
 vnoremap <silent> <script> <Plug>(visualstar-#)
-\        :<C-u>call <SID>search('?', 0)<CR><SID>(count)
+\        :<C-u>call <SID>search('?', 0)<CR><SID>(count)<SID>(extra_commands)
 vnoremap <silent> <script> <Plug>(visualstar-g*)
-\        :<C-u>call <SID>search('/', 1)<CR><SID>(count)
+\        :<C-u>call <SID>search('/', 1)<CR><SID>(count)<SID>(extra_commands)
 vnoremap <silent> <script> <Plug>(visualstar-g#)
-\        :<C-u>call <SID>search('?', 1)<CR><SID>(count)
+\        :<C-u>call <SID>search('?', 1)<CR><SID>(count)<SID>(extra_commands)
 
 nnoremap <expr> <SID>(count) <SID>count()
+nnoremap <expr> <SID>(extra_commands) <SID>extra_commands()
 
 
 if !exists('g:visualstar_no_default_key_mappings') ||
