@@ -10,7 +10,7 @@ CONTENTS					*visualstar-contents*
 INTRODUCTION			|visualstar-introduction|
 INTERFACE			|visualstar-interface|
   KEY MAPPINGS			  |visualstar-key-mappings|
-  EXTRA COMMANDS                  |visualstar-settings|
+SETTINGS			|visualstar-settings|
 EXAMPLES			|visualstar-examples|
 CHANGELOG			|visualstar-changelog|
 
@@ -83,17 +83,21 @@ g<kMultiply>	<Plug>(visualstar-g*)
 g<S-LeftMouse>	<Plug>(visualstar-g*)
 g#		<Plug>(visualstar-g#)
 
-EXTRA COMMANDS                                 *visualstar-settings*
 
 
-                                           *g:visualstar_extra_commands*
-In case you want to run extra commands when searching, you can set the
-variable *g:visualstar_extra_commands* to a key sequence.
-For example, to center the search in the window and open enough folds, you can
-set the following variable.
+==============================================================================
+SETTINGS					*visualstar-settings*
+
+
+g:visualstar_extra_commands			*g:visualstar_extra_commands*
+	In case you want to run extra commands when searching, you can set
+	this variable to a key sequence.
+	For example, to center the search in the window and open enough folds,
+	you can set the following variable.
 >
-    let g:visualstar_extra_commands = 'zzzv'
+	let g:visualstar_extra_commands = 'zzzv'
 <
+
 
 ==============================================================================
 EXAMPLES					*visualstar-examples*
