@@ -16,7 +16,7 @@ function! s:search(type, g)
   let s:count = v:count1 . a:type
   let reg = '"'
   let [save_reg, save_type] = [getreg(reg), getregtype(reg)]
-  normal! gv""y
+  noautocmd normal! gv""y
   let text = @"
   call setreg(reg, save_reg, save_type)
 
